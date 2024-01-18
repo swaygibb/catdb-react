@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Header, Segment, Button, Loader, Image } from 'semantic-ui-react';
 import { Link, BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import CatDetails from './CatDetails'; 
+import CatDetails from './CatDetails';
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 
