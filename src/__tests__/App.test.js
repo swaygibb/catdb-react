@@ -34,7 +34,7 @@ test('renders cats table with loading state and then displays cat data', async (
     });
 });
 
-test('navigates to cat details page when "Details" button is clicked', async () => {
+test('can you click the details button', async () => {
     render(<App />);
 
     await waitFor(() => screen.getByText(/Cat1/i));

@@ -25,11 +25,9 @@ test('renders cat details and navigates back to the list', async () => {
         </MemoryRouter>
     );
 
-    // Loading state should be displayed initially
     expect(screen.getByText(/Cat Details/i)).toBeInTheDocument();
     expect(screen.getByText(/Loading/i)).toBeInTheDocument();
 
-    // Wait for the API response and check if cat details are displayed
     await waitFor(() => {
         expect(screen.queryByText(/Loading/i)).not.toBeInTheDocument();
         expect(screen.getByText(/Cat ID: 1/i)).toBeInTheDocument();
@@ -37,6 +35,5 @@ test('renders cat details and navigates back to the list', async () => {
         expect(screen.getByText(/Status: Available/i)).toBeInTheDocument();
     });
 
-    // Click on the "Go Back to List" button
     userEvent.click(screen.getByText(/Go Back to List/i));
 });
